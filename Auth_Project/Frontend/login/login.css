@@ -1,0 +1,39 @@
+body {
+  
+  background-color: pink;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: white;
+  padding: 30px;
+   width: 300px;
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#errorMsg {
+  color: red;
+  margin-top: 10px;
+}
