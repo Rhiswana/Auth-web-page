@@ -12,7 +12,7 @@
     .then(data=>{
          document.getElementById("errorMsg").innerText=data;
         if(data=="successfully register"){
-              window.location.href="../login/login.html"
+              window.location.href="./index.html"
         }
     })
  }

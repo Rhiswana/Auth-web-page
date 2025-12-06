@@ -12,7 +12,7 @@ function login(){
      .then(data=>{
           document.getElementById("errorMsg").innerText=data;
          if(data == "Successfully login"){
-             window.location.href = "../Dashboard/Dashboard.html";
+             window.location.href = "./Dashboard.html";
          }
      })
      
