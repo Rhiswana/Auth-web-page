@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 const login = async (req, res) => {
   const { email, password } = req.body;
 
-  const findUser = await user.findOne({ email });
+  const findUser = await User.findOne({ email });
   if (!findUser) {
     return res.send("Not registered user");
   }
