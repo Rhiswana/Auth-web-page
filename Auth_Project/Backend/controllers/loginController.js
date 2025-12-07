@@ -1,4 +1,4 @@
-const user = require("../model/user");
+const User = require("../model/user");
 const bcrypt = require("bcrypt");
 
 
@@ -6,12 +6,12 @@ const bcrypt = require("bcrypt");
 const login = async (req, res) => {
   const { email, password } = req.body;
 
-  const User = await user.findOne({ email });
-  if (!User) {
+  const findUser = await user.findOne({ email });
+  if (!findUser) {
     return res.send("Not registered user");
   }
 
-  const same = await bcrypt.compare(password, User.password);
+  const same = await bcrypt.compare(password, findUser.password);
 
   if (!same) {
     return res.send("Invalid password");
